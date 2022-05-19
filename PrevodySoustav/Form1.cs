@@ -53,5 +53,10 @@ namespace PrevodySoustav
             string hex = textBox1.Text;
             label1.Text = Prevod.HexBin(hex);
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
