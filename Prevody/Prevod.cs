@@ -89,29 +89,35 @@ namespace Prevody
                 zbytek = dec % 16;
                 if (zbytek < 10)
                 {
-                    hex = hex.Insert(0, zbytek.ToString());
+                    hex = zbytek.ToString() + hex;
                 }
                 else
                 {
                     switch (zbytek)
                     {
                         case 10:
-                            hex = hex.Insert(0, "A");
+                            
+                            hex = "A" + hex;
                             break;
                         case 11:
-                            hex = hex.Insert(0, "B");
+                            
+                            hex = "B" + hex;
                             break;
                         case 12:
-                            hex = hex.Insert(0, "C");
+                            
+                            hex = "C" + hex;
                             break;
                         case 13:
-                            hex = hex.Insert(0, "D");
+                            
+                            hex = "D" + hex;
                             break;
                         case 14:
-                            hex = hex.Insert(0, "E");
+                            
+                            hex = "E" + hex;
                             break;
                         case 15:
-                            hex = hex.Insert(0, "F");
+
+                            hex = "F" + hex;
                             break;
                         default:
                             break;
@@ -178,6 +184,9 @@ namespace Prevody
             {
                 switch (hex[i])
                 {
+                    case '0':
+                        bin += "0000 ";
+                        break;
                     case '1':
                         bin += "0001 ";
                         break;
